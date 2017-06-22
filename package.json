@@ -1,0 +1,15 @@
+{
+  "name": "convert-es6-function",
+  "version": "0.0.1",
+  "description": "package for converting between ES6 arrow functions and ES5 functions",
+  "main": "index.js",
+  "author": "Sarah Lim",
+  "license": "MIT",
+  "dependencies": {
+    "esprima": "^4.0.0",
+    "mocha": "^3.4.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}
