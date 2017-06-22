@@ -50,7 +50,7 @@ const arrowToFunctionExpression = arrow => {
 
     // If the arrow function is inline, we need to add a return statement to
     // the resulting FunctionExpression.body
-    const isInlineArrow = arrow.body !== esprima.Syntax.BlockStatement;
+    const isInlineArrow = arrow.body.type !== esprima.Syntax.BlockStatement;
 
     if (isInlineArrow) {
         const bodyWithReturn = createBlockStatement([
