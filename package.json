@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "package for converting between ES6 arrow functions and ES5 functions",
   "main": "index.js",
+  "repository": "https://github.com/sarahlim/convert-es6-function",
   "author": "Sarah Lim",
   "license": "MIT",
   "dependencies": {
