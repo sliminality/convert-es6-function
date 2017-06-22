@@ -1,17 +1,17 @@
 const assert = require('assert');
-const arrowToExpression = require('../src/arrowToExpression');
+const transformArrow = require('../src/transformArrow');
 
-describe('arrowToExpression', function () {
+describe('transformArrow', function () {
     it('handles inline arrow functions', function () {
         // No arguments.
         assert.equal(
-            arrowToExpression(
+            transformArrow(
 `const x = 4;
 const f = () => 1 + 1;
 f() + x;`
             ),
 `const x = 4;
-const f = function() {
+const f = function () {
     return 1 + 1;
 };
 f() + x;`
@@ -19,7 +19,7 @@ f() + x;`
 
         // Multiple arguments.
         assert.equal(
-            arrowToExpression(
+            transformArrow(
 `let addTwoMaybe = null;
 if (true) {
     addTwoMaybe = (x, y) => x + y;

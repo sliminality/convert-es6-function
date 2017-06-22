@@ -1,4 +1,4 @@
-const arrowToExpression = require('./src/arrowToExpression');
+const transformArrows = require('./src/transformArrows');
 
 const convert = (input) => {
     return input;
